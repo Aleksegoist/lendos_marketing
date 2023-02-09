@@ -100,6 +100,10 @@ body {
   align-items: flex-end;
 }
 
+.menu__btn {
+  display: none;
+}
+
 .menu__list {
   display: flex;
 }
@@ -727,4 +731,66 @@ expertise__item-text {
   line-height: 16px;
   color: #ccc;
   background-color: #2a2c2b;
+}
+
+@media (max-width: 768px) {
+  .menu__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    background-color: #000;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    transform: translateY(-200%);
+    transition: all 0.5s;
+  }
+
+  .menu__list.menu__list--active {
+    transform: translateY(0%);
+  }
+
+  .menu__list-item + .menu__list-item {
+    margin-left: 0;
+  }
+
+  .menu__list-link {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+  }
+
+  .menu__btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .header__top-inner {
+    align-items: center;
+  }
+
+  .header__title {
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 10px;
+  }
+  .header__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .header__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .header__subtitle {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
