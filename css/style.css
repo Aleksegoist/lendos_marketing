@@ -738,17 +738,13 @@ expertise__item-text {
     position: absolute;
     left: 0;
     right: 0;
-    top: 90px;
+    top: 0;
     background-color: #000;
     display: block;
     text-align: center;
-    padding: 15px 0;
+    padding: 90px 0 15px;
     transform: translateY(-200%);
     transition: all 0.5s;
-  }
-
-  .menu__list.menu__list--active {
-    transform: translateY(0%);
   }
 
   .menu__list-item + .menu__list-item {
@@ -760,6 +756,10 @@ expertise__item-text {
     padding: 15px 0;
     color: #fff;
   }
+  .logo {
+    position: relative;
+    z-index: 2;
+  }
 
   .menu__btn {
     display: block;
@@ -767,6 +767,20 @@ expertise__item-text {
     border: none;
     padding: 0;
     margin-top: 30px;
+    /* position: relative;
+    z-index: 2; */
+  }
+
+  .header__top-inner.header__top-inner--active .menu__list {
+    transform: translateY(0%);
+  }
+
+  .header__top-inner.header__top-inner--active path {
+    fill: white;
+  }
+
+  .header__top-inner.header__top-inner--active .menu__btn rect {
+    fill: white;
   }
 
   .header__top-inner {
